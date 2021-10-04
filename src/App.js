@@ -22,7 +22,7 @@ function App() {
         <FeaturesSection />
         <DeviceSection />
         <ResearchSection />
-        {/* <SupportSection /> */}
+        <SupportSection />
         {/* <CarouselSection /> */}
         {/* <VideoSection /> */}
         {/* <TrialSection /> */}
