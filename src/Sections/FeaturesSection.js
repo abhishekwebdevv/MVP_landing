@@ -30,7 +30,7 @@ const images = [
 
 export default function FeaturesSection() {
   const classes = useStyles();
-  const { md, lg } = useBreakpoints();
+  const { lg } = useBreakpoints();
 
   return (
     <section className={classes.section}>
@@ -62,7 +62,7 @@ export default function FeaturesSection() {
       </Box>
       <Grid container spacing={4} padding={lg && '0px 300px'} marginTop="20px">
         {images.map((item) => (
-          <Grid item xs={md ? 4 : 12}>
+          <Grid item xs={12} md={4}>
             <ImageCard
               img={item.img}
               heading={item.heading}

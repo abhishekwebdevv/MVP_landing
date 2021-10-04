@@ -41,7 +41,7 @@ const featured = [
 
 export default function BannerSection() {
   const classes = useStyles();
-  const { md, lg, sm } = useBreakpoints();
+  const { md, lg } = useBreakpoints();
 
   return (
     <>
@@ -49,7 +49,8 @@ export default function BannerSection() {
         <Grid container>
           <Grid
             item
-            xs={md ? 6 : 12}
+            xs={12}
+            md={6}
             display="flex"
             alignItems="center"
             justifyContent="center"
@@ -107,7 +108,8 @@ export default function BannerSection() {
             alignItems="center"
             justifyContent="center"
             item
-            xs={md ? 6 : 12}
+            xs={12}
+            md={6}
             order={!md && 1}
           >
             <img
@@ -144,7 +146,8 @@ export default function BannerSection() {
             {featured.map((item) => (
               <Grid
                 item
-                xs={sm ? 2 : 6}
+                xs={6}
+                sm={2}
                 display="flex"
                 marginY="10px"
                 justifyContent="center"

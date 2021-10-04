@@ -6,14 +6,19 @@ import useBreakpoints from '../Components/useBreakpoints';
 
 export default function DeviceSection() {
   const classes = useStyles();
-  const { md, lg } = useBreakpoints;
+  const { md, lg } = useBreakpoints();
 
   return (
     <section className={classes.section}>
-      <Grid container paddingX={lg ? '450px' : '28px'}>
+      <Grid
+        container
+        paddingX={lg ? '450px' : '28px'}
+        paddingBottom={!md && '20px'}
+      >
         <Grid
           item
-          xs={md ? 7 : 12}
+          xs={12}
+          md={7}
           display="flex"
           flexDirection="column"
           justifyContent="center"
@@ -35,7 +40,8 @@ export default function DeviceSection() {
         </Grid>
         <Grid
           item
-          xs={md ? 5 : 12}
+          xs={12}
+          md={5}
           order={!md && 1}
           display="flex"
           alignItems="center"
