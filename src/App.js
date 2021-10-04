@@ -20,7 +20,7 @@ function App() {
       <Layout>
         <BannerSection />
         <FeaturesSection />
-        {/* <DeviceSection /> */}
+        <DeviceSection />
         {/* <ResearchSection /> */}
         {/* <SupportSection /> */}
         {/* <CarouselSection /> */}
