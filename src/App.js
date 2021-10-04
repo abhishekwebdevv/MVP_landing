@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Typography, CssBaseline } from '@mui/material';
+import { CssBaseline } from '@mui/material';
 import './App.css';
 import Layout from './Components/Layout';
 import BannerSection from './Sections/BannerSection';
@@ -19,15 +19,15 @@ function App() {
       <CssBaseline />
       <Layout>
         <BannerSection />
-        <FeaturesSection />
-        <DeviceSection />
-        <ResearchSection />
-        <SupportSection />
-        <CarouselSection />
-        <VideoSection />
-        <TrialSection />
-        <PartnerSection />
-        <FooterSection />
+        {/* <FeaturesSection /> */}
+        {/* <DeviceSection /> */}
+        {/* <ResearchSection /> */}
+        {/* <SupportSection /> */}
+        {/* <CarouselSection /> */}
+        {/* <VideoSection /> */}
+        {/* <TrialSection /> */}
+        {/* <PartnerSection /> */}
+        {/* <FooterSection /> */}
       </Layout>
     </Fragment>
   );

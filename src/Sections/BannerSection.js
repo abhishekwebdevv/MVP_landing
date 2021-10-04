@@ -9,6 +9,8 @@ import feature3 from '../Assets/feature3.png';
 import feature4 from '../Assets/feature4.png';
 import feature5 from '../Assets/feature5.png';
 import feature6 from '../Assets/feature6.png';
+import useBreakpoints from '../Components/useBreakpoints';
+import { Box } from '@mui/system';
 
 const featured = [
   {
@@ -39,6 +41,7 @@ const featured = [
 
 export default function BannerSection() {
   const classes = useStyles();
+  const { md, lg, sm } = useBreakpoints();
 
   return (
     <>
@@ -46,23 +49,24 @@ export default function BannerSection() {
         <Grid container>
           <Grid
             item
-            xs={6}
+            xs={md ? 6 : 12}
             display="flex"
             alignItems="center"
             justifyContent="center"
+            order={!md && 2}
           >
-            <Grid container spacing={2} padding="0px 0px 0px 48px">
+            <Grid container spacing={2} padding={md && '0px 0px 0px 48px'}>
               <Grid item xs={12}>
-                <Typography variant="h3" className="bold">
+                <Typography variant="h3" className="bold" align="center">
                   Safer Students.
                 </Typography>
-                <Typography variant="h3" className="bold">
+                <Typography variant="h3" className="bold" align="center">
                   Better Learning.
                 </Typography>
               </Grid>
 
               <Grid item xs={12}>
-                <Typography className={classes.slogan}>
+                <Typography className={classes.slogan} align="center">
                   Take your digital learning program to new heights with
                   GoGuardian, the most powerful all-in-one suite to manage your
                   school’s 1:1 technology.
@@ -70,8 +74,8 @@ export default function BannerSection() {
               </Grid>
 
               <Grid item xs={12}>
-                <Grid container spacing={2}>
-                  <Grid item xs={4}>
+                <Box display="flex">
+                  <Box width="100%" marginX="10px">
                     <Button
                       large
                       fullWidth
@@ -81,9 +85,9 @@ export default function BannerSection() {
                     >
                       Get more info
                     </Button>
-                  </Grid>
+                  </Box>
 
-                  <Grid item xs={4}>
+                  <Box width="100%" marginX="10px">
                     <Button
                       large
                       fullWidth
@@ -93,12 +97,19 @@ export default function BannerSection() {
                     >
                       Explore the suite
                     </Button>
-                  </Grid>
-                </Grid>
+                  </Box>
+                </Box>
               </Grid>
             </Grid>
           </Grid>
-          <Grid item xs={6}>
+          <Grid
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+            item
+            xs={md ? 6 : 12}
+            order={!md && 1}
+          >
             <img
               src={bannerImage}
               alt="people working"
@@ -108,7 +119,12 @@ export default function BannerSection() {
         </Grid>
       </section>
       <section>
-        <div className={classes.featured}>
+        <Box
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+          justifyContent="center"
+        >
           <Typography
             variant="button"
             align="center"
@@ -119,14 +135,25 @@ export default function BannerSection() {
           >
             as featured in
           </Typography>
-          <Grid container padding="0px 336px" alignItems="center" margin="10px">
+          <Grid
+            container
+            padding={lg && '0px 336px'}
+            alignItems="center"
+            margin="10px"
+          >
             {featured.map((item) => (
-              <Grid item xs={2} display="flex" justifyContent="center">
+              <Grid
+                item
+                xs={sm ? 2 : 6}
+                display="flex"
+                marginY="10px"
+                justifyContent="center"
+              >
                 <img src={item.img} alt="company logo" width={item.width} />
               </Grid>
             ))}
           </Grid>
-        </div>
+        </Box>
       </section>
     </>
   );
@@ -136,6 +163,10 @@ const useStyles = makeStyles(() =>
   createStyles({
     bannerSection: {
       padding: '8rem 20rem',
+
+      '@media(max-width:1200px)': {
+        padding: '4rem 1rem',
+      },
     },
     slogan: {
       color: 'rgba(0,0,0,.65)',
@@ -143,13 +174,9 @@ const useStyles = makeStyles(() =>
     },
     image: {
       height: '100%',
+      maxHeight: '398px',
       width: '100%',
-    },
-    featured: {
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
+      maxWidth: '500px',
     },
   })
 );
