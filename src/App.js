@@ -19,7 +19,7 @@ function App() {
       <CssBaseline />
       <Layout>
         <BannerSection />
-        {/* <FeaturesSection /> */}
+        <FeaturesSection />
         {/* <DeviceSection /> */}
         {/* <ResearchSection /> */}
         {/* <SupportSection /> */}

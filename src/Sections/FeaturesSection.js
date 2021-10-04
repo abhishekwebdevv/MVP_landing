@@ -1,10 +1,11 @@
 import React from 'react';
 import { makeStyles, createStyles } from '@mui/styles';
-import { Grid, Typography } from '@mui/material';
+import { Box, Grid, Typography } from '@mui/material';
 import image1 from '../Assets/image1.png';
 import image2 from '../Assets/image2.png';
 import image3 from '../Assets/image3.png';
 import ImageCard from '../Components/ImageCard';
+import useBreakpoints from '../Components/useBreakpoints';
 
 const images = [
   {
@@ -29,22 +30,39 @@ const images = [
 
 export default function FeaturesSection() {
   const classes = useStyles();
+  const { md, lg } = useBreakpoints();
 
   return (
     <section className={classes.section}>
-      <div className={classes.header}>
-        <Typography fontWeight="bold" color="#002f6c" fontSize="35px">
+      <Box
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        justifyContent="center"
+        textAlign="center"
+      >
+        <Typography
+          fontWeight="bold"
+          color="#002f6c"
+          fontSize="35px"
+          maxWidth="650px"
+        >
           Powerful Alone. Better Together.
         </Typography>
-        <Typography color="#474747" fontSize="17.5px" margin="14px 0px">
+        <Typography
+          color="#474747"
+          fontSize="17.5px"
+          margin="14px 0px"
+          maxWidth="650px"
+        >
           Unify your filtering, classroom engagement, and school mental health
           tools into a single suite. GoGuardian’s suite of tools helps you
           maximize the learning potential of your 1:1 school technology program.
         </Typography>
-      </div>
-      <Grid container spacing={4} padding="0px 300px" marginTop="20px">
+      </Box>
+      <Grid container spacing={4} padding={lg && '0px 300px'} marginTop="20px">
         {images.map((item) => (
-          <Grid item xs={4}>
+          <Grid item xs={md ? 4 : 12}>
             <ImageCard
               img={item.img}
               heading={item.heading}
@@ -61,14 +79,6 @@ const useStyles = makeStyles(() =>
   createStyles({
     section: {
       padding: '84px 28px',
-    },
-    header: {
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      margin: '0px 600px',
-      textAlign: 'center',
     },
   })
 );
