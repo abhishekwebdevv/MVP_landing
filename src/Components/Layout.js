@@ -11,7 +11,7 @@ import {
 import { makeStyles } from '@mui/styles';
 import MenuList from './MenuList';
 import { BiSearch } from 'react-icons/bi';
-import { GiHamburgerMenu } from 'react-icons/gi';
+// import { GiHamburgerMenu } from 'react-icons/gi';
 import Button from './Button';
 import useBreakpoints from './useBreakpoints';
 import MobileDrawer from './MobileDrawer';
@@ -31,7 +31,7 @@ export default function Layout(props) {
   const { children } = props;
   const classes = useStyles();
 
-  const { md, lg } = useBreakpoints();
+  const { md } = useBreakpoints();
 
   return (
     <>

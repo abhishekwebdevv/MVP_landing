@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-import { Drawer, IconButton, ClickAwayListener } from '@mui/material';
-import { makeStyles } from '@mui/styles';
+import { Drawer, IconButton } from '@mui/material';
+// import { makeStyles } from '@mui/styles';
 import { GiHamburgerMenu } from 'react-icons/gi';
-
-// const drawerWidth = 240
 
 export default function MobileDrawer() {
   const [open, setOpen] = useState(false);
@@ -33,13 +31,3 @@ export default function MobileDrawer() {
     </>
   );
 }
-
-const useStyles = makeStyles({
-  // drawer: {
-  //   width: drawerWidth,
-  //   flexShrink: 0,
-  // },
-  // drawerPaper: {
-  //   width: drawerWidth,
-  // },
-});
