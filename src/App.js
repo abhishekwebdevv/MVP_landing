@@ -9,7 +9,7 @@ import ResearchSection from './Sections/ResearchSection';
 import SupportSection from './Sections/SupportSection';
 import CarouselSection from './Sections/CarouselSection';
 import VideoSection from './Sections/VideoSection';
-// import TrialSection from './Sections/TrialSection';
+import TrialSection from './Sections/TrialSection';
 // import PartnerSection from './Sections/PartnerSection';
 // import FooterSection from './Sections/FooterSection';
 
@@ -25,7 +25,7 @@ function App() {
         <SupportSection />
         <CarouselSection />
         <VideoSection />
-        {/* <TrialSection /> */}
+        <TrialSection />
         {/* <PartnerSection /> */}
         {/* <FooterSection /> */}
       </Layout>
