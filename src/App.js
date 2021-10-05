@@ -9,9 +9,9 @@ import ResearchSection from './Sections/ResearchSection';
 import SupportSection from './Sections/SupportSection';
 import CarouselSection from './Sections/CarouselSection';
 import VideoSection from './Sections/VideoSection';
-import TrialSection from './Sections/TrialSection';
-import PartnerSection from './Sections/PartnerSection';
-import FooterSection from './Sections/FooterSection';
+// import TrialSection from './Sections/TrialSection';
+// import PartnerSection from './Sections/PartnerSection';
+// import FooterSection from './Sections/FooterSection';
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
         <ResearchSection />
         <SupportSection />
         <CarouselSection />
-        {/* <VideoSection /> */}
+        <VideoSection />
         {/* <TrialSection /> */}
         {/* <PartnerSection /> */}
         {/* <FooterSection /> */}

@@ -30,7 +30,7 @@ const educators = [
 
 export default function CarouselSection() {
   const classes = useStyles();
-  const { md, lg } = useBreakpoints();
+  const { lg } = useBreakpoints();
 
   return (
     <section className={classes.section}>
