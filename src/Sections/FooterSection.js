@@ -1,6 +1,6 @@
 import React from 'react';
 import { createStyles, makeStyles } from '@mui/styles';
-import { Box, Divider, Typography } from '@mui/material';
+import { Box, Divider, Grid, Typography } from '@mui/material';
 import {
   AiFillFacebook,
   AiOutlineInstagram,
@@ -8,6 +8,7 @@ import {
   AiFillYoutube,
   AiFillLinkedin,
 } from 'react-icons/ai';
+import useBreakpoints from '../Components/useBreakpoints';
 
 const solutionsList = [
   'Explore the Suite',
@@ -63,94 +64,107 @@ const pearDeckList = [
 
 export default function FooterSection() {
   const classes = useStyles();
+  const { md, lg } = useBreakpoints();
 
   return (
     <section className={classes.section}>
-      <Box display="flex" justifyContent="center">
-        <Box padding="0px 30px">
-          <Typography fontSize="14px" fontWeight="bold" marginBottom="15px">
-            Solutions
-          </Typography>
-          {solutionsList.map((item) => (
-            <Typography
-              fontSize="11px"
-              color="#939393"
-              marginBottom="10px"
-              className="link"
-            >
-              {item}
+      <Grid container display="flex" justifyContent="center" flexWrap="wrap">
+        <Grid item xs={12} sm={4} lg={2}>
+          <Box padding="0px 30px">
+            <Typography fontSize="14px" fontWeight="bold" marginBottom="15px">
+              Solutions
             </Typography>
-          ))}
-        </Box>
+            {solutionsList.map((item) => (
+              <Typography
+                fontSize="11px"
+                color="#939393"
+                marginBottom="10px"
+                className="link"
+              >
+                {item}
+              </Typography>
+            ))}
+          </Box>
+        </Grid>
 
-        <Box padding="0px 30px">
-          <Typography fontSize="14px" fontWeight="bold" marginBottom="15px">
-            Resources
-          </Typography>
-          {resourcesList.map((item) => (
-            <Typography
-              fontSize="11px"
-              color="#939393"
-              marginBottom="10px"
-              className="link"
-            >
-              {item}
+        <Grid item xs={12} sm={4} lg={2}>
+          <Box padding="0px 30px">
+            <Typography fontSize="14px" fontWeight="bold" marginBottom="15px">
+              Resources
             </Typography>
-          ))}
-        </Box>
+            {resourcesList.map((item) => (
+              <Typography
+                fontSize="11px"
+                color="#939393"
+                marginBottom="10px"
+                className="link"
+              >
+                {item}
+              </Typography>
+            ))}
+          </Box>
+        </Grid>
 
-        <Box padding="0px 30px">
-          <Typography fontSize="14px" fontWeight="bold" marginBottom="15px">
-            Support
-          </Typography>
-          {supportList.map((item) => (
-            <Typography
-              fontSize="11px"
-              color="#939393"
-              marginBottom="10px"
-              className="link"
-            >
-              {item}
+        <Grid item xs={12} sm={4} lg={2}>
+          <Box padding="0px 30px">
+            <Typography fontSize="14px" fontWeight="bold" marginBottom="15px">
+              Support
             </Typography>
-          ))}
-        </Box>
+            {supportList.map((item) => (
+              <Typography
+                fontSize="11px"
+                color="#939393"
+                marginBottom="10px"
+                className="link"
+              >
+                {item}
+              </Typography>
+            ))}
+          </Box>
+        </Grid>
 
-        <Box padding="0px 30px">
-          <Typography fontSize="14px" fontWeight="bold" marginBottom="15px">
-            Company
-          </Typography>
-          {companyList.map((item) => (
-            <Typography
-              fontSize="11px"
-              color="#939393"
-              marginBottom="10px"
-              className="link"
-            >
-              {item}
+        <Grid item xs={12} sm={4} lg={2}>
+          <Box padding="0px 30px">
+            <Typography fontSize="14px" fontWeight="bold" marginBottom="15px">
+              Company
             </Typography>
-          ))}
-        </Box>
+            {companyList.map((item) => (
+              <Typography
+                fontSize="11px"
+                color="#939393"
+                marginBottom="10px"
+                className="link"
+              >
+                {item}
+              </Typography>
+            ))}
+          </Box>
+        </Grid>
 
-        <Box padding="0px 30px">
-          <Typography fontSize="14px" fontWeight="bold" marginBottom="15px">
-            Pear Deck
-          </Typography>
-          {pearDeckList.map((item) => (
-            <Typography
-              fontSize="11px"
-              color="#939393"
-              marginBottom="10px"
-              className="link"
-            >
-              {item}
+        <Grid item xs={12} sm={4} lg={2}>
+          <Box padding="0px 30px">
+            <Typography fontSize="14px" fontWeight="bold" marginBottom="15px">
+              Pear Deck
             </Typography>
-          ))}
-        </Box>
-      </Box>
-      <Box padding="20px 450px 0px">
+            {pearDeckList.map((item) => (
+              <Typography
+                fontSize="11px"
+                color="#939393"
+                marginBottom="10px"
+                className="link"
+              >
+                {item}
+              </Typography>
+            ))}
+          </Box>
+        </Grid>
+      </Grid>
+
+      <Box paddingTop="20px" paddingX={lg ? '450px' : '28px'}>
         <Divider />
         <Box
           display="flex"
+          flexDirection={md ? 'row' : 'column'}
           justifyContent="space-between"
           alignItems="center"
           padding="18px 0px"
