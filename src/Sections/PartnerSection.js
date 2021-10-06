@@ -7,6 +7,7 @@ import student from '../Assets/studentPartner.jpg';
 import gei from '../Assets/geiPartner.jpg';
 import perpa from '../Assets/PerpaPartner.jpg';
 import ida from '../Assets/idaPartner.jpg';
+import useBreakpoints from '../Components/useBreakpoints';
 
 const partners = [
   { img: google, height: '60px' },
@@ -25,25 +26,28 @@ const information = [
 
 export default function PartnerSection() {
   const classes = useStyles();
+  const { lg } = useBreakpoints();
 
   return (
     <>
       <section className={classes.section}>
-        <Grid container padding="0px 450px">
+        <Grid container paddingX={lg ? '450px' : '28px'}>
           {partners.map((item) => (
             <Grid
               item
               display="flex"
               alignItems="center"
               justifyContent="center"
-              xs={2}
+              marginY="20px"
+              xs={6}
+              md={2}
             >
               <img src={item.img} alt="logos" height={item.height} />
             </Grid>
           ))}
         </Grid>
       </section>
-      <Box bgcolor="#fafafa" padding="70px 680px">
+      <Box bgcolor="#fafafa" paddingY="70px" paddingX={lg ? '680px' : '28px'}>
         {information.map((item) => (
           <Typography fontSize="12px" color="#000000A6" lineHeight="25px">
             {item}
