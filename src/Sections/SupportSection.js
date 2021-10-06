@@ -6,13 +6,13 @@ import useBreakpoints from '../Components/useBreakpoints';
 
 export default function SupportSection() {
   const classes = useStyles();
-  const { md, lg } = useBreakpoints();
+  const { md, lg, xl } = useBreakpoints();
 
   return (
     <section className={classes.section}>
       <Grid
         container
-        paddingX={lg ? '450px' : '28px'}
+        paddingX={xl ? '450px' : lg ? '350px' : '28px'}
         paddingBottom={!md && '20px'}
       >
         <Grid

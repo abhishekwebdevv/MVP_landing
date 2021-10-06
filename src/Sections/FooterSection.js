@@ -64,7 +64,7 @@ const pearDeckList = [
 
 export default function FooterSection() {
   const classes = useStyles();
-  const { md, lg } = useBreakpoints();
+  const { md, lg, xl } = useBreakpoints();
 
   return (
     <section className={classes.section}>
@@ -160,7 +160,7 @@ export default function FooterSection() {
         </Grid>
       </Grid>
 
-      <Box paddingTop="20px" paddingX={lg ? '450px' : '28px'}>
+      <Box paddingTop="20px" paddingX={xl ? '450px' : lg ? '350px' : '28px'}>
         <Divider />
         <Box
           display="flex"

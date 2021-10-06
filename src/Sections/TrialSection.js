@@ -14,11 +14,11 @@ const listItems = [
 
 export default function TrialSection() {
   const classes = useStyles();
-  const { md, lg } = useBreakpoints();
+  const { md, lg, xl } = useBreakpoints();
 
   return (
     <section className={classes.section}>
-      <Grid container paddingX={lg ? '450px' : '28px'}>
+      <Grid container paddingX={xl ? '450px' : lg ? '350px' : '28px'}>
         <Grid item xs={12} md={6}>
           <img src={AirBaloon} alt="devices" className={classes.image} />
         </Grid>

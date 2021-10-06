@@ -124,7 +124,7 @@ const CarouselCard = ({ text, name, designation, address, classes }) => (
 
 export default function CarouselSection() {
   const classes = useStyles();
-  const { lg } = useBreakpoints();
+  const { lg, xl } = useBreakpoints();
 
   return (
     <section className={classes.section}>
@@ -134,7 +134,7 @@ export default function CarouselSection() {
         alignItems="center"
         justifyContent="center"
         textAlign="center"
-        marginX={lg ? '500px' : '28px'}
+        marginX={xl ? '500px' : lg ? '350px' : '28px'}
       >
         <Typography fontWeight="bold" color="#002f6c" fontSize="35px">
           We're in classrooms just like yours.
@@ -210,6 +210,7 @@ const useStyles = makeStyles(() =>
     },
     card: {
       margin: '10px',
+      borderRadius: '10px !important',
       boxShadow: '1px 1px 10px 0 rgb(0 0 0 / 15%) !important',
     },
     content: {

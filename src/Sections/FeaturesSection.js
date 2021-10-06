@@ -30,7 +30,7 @@ const images = [
 
 export default function FeaturesSection() {
   const classes = useStyles();
-  const { lg } = useBreakpoints();
+  const { xl } = useBreakpoints();
 
   return (
     <section className={classes.section}>
@@ -60,7 +60,7 @@ export default function FeaturesSection() {
           maximize the learning potential of your 1:1 school technology program.
         </Typography>
       </Box>
-      <Grid container spacing={4} padding={lg && '0px 300px'} marginTop="20px">
+      <Grid container spacing={4} padding={xl && '0px 300px'} marginTop="20px">
         {images.map((item) => (
           <Grid item xs={12} md={4}>
             <ImageCard

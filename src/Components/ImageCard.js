@@ -31,6 +31,7 @@ const useStyles = makeStyles(() =>
   createStyles({
     card: {
       width: '100%',
+      height: '100%',
       borderRadius: '16px !important',
       boxShadow: '3px 3px 9px 1px rgb(0 0 0 / 10%) !important',
     },

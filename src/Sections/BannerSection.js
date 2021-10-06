@@ -167,7 +167,11 @@ const useStyles = makeStyles(() =>
     bannerSection: {
       padding: '8rem 20rem',
 
-      '@media(max-width:1200px)': {
+      '@media(max-width:1500px)': {
+        padding: '4rem 15rem',
+      },
+
+      '@media(max-width:1281px)': {
         padding: '4rem 1rem',
       },
     },

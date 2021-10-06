@@ -11,7 +11,6 @@ import {
 import { makeStyles } from '@mui/styles';
 import MenuList from './MenuList';
 import { BiSearch } from 'react-icons/bi';
-// import { GiHamburgerMenu } from 'react-icons/gi';
 import Button from './Button';
 import useBreakpoints from './useBreakpoints';
 import MobileDrawer from './MobileDrawer';
@@ -99,7 +98,6 @@ export default function Layout(props) {
                   item
                   xs={1}
                 >
-                  {/* <GiHamburgerMenu /> */}
                   <MobileDrawer />
                 </Grid>
               )}
@@ -122,7 +120,11 @@ const useStyles = makeStyles({
     padding: '0rem 20rem !important',
     color: '#000',
 
-    '@media(max-width:1200px)': {
+    '@media(max-width:1500px)': {
+      padding: ' 0rem 15rem !important',
+    },
+
+    '@media(max-width:1281px)': {
       padding: ' 0rem 1rem !important',
     },
   },

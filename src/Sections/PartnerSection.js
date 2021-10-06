@@ -26,12 +26,12 @@ const information = [
 
 export default function PartnerSection() {
   const classes = useStyles();
-  const { lg } = useBreakpoints();
+  const { lg, xl } = useBreakpoints();
 
   return (
     <>
       <section className={classes.section}>
-        <Grid container paddingX={lg ? '450px' : '28px'}>
+        <Grid container paddingX={xl ? '450px' : lg ? '250px' : '28px'}>
           {partners.map((item) => (
             <Grid
               item
@@ -47,7 +47,11 @@ export default function PartnerSection() {
           ))}
         </Grid>
       </section>
-      <Box bgcolor="#fafafa" paddingY="70px" paddingX={lg ? '680px' : '28px'}>
+      <Box
+        bgcolor="#fafafa"
+        paddingY="70px"
+        paddingX={xl ? '680px' : lg ? '400px' : '28px'}
+      >
         {information.map((item) => (
           <Typography fontSize="12px" color="#000000A6" lineHeight="25px">
             {item}
